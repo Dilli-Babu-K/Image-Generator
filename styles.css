@@ -1,65 +1,99 @@
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 2%;
-    border-radius: 5%;
-    background-color: rgb(234, 234, 234);
+    background: linear-gradient(135deg, #f8f9fa, #e0eafc);
+    color: #333;
 }
 
+/* Header */
 header {
-    background-color: black;
-    color: whitesmoke;
-    padding: 2%;
+    background: linear-gradient(90deg, #000000, #434343);
+    color: white;
+    padding: 1.5% 3%;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 header nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
 }
 
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd369;
+}
+
+/* Main content */
 .main {
     padding: 20px;
-    padding-top: 5%;
     border-radius: 10px;
 }
 
+/* Image grid */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .image-grid img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Search box */
 .searchInput {
-    border-radius: 5px;
-    border: none;
-    height: 10%;
-    width: 10;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 250px;
+    padding: 0 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .searchInput:focus {
     outline: none;
+    border-color: #434343;
+    box-shadow: 0 0 8px rgba(67, 67, 67, 0.3);
 }
 
+/* Paragraphs */
 p {
-    color: white;
+    color: #333;
     font-weight: bold;
     font-style: italic;
 }
+
+/* Footer */
 footer {
-    background-color: black;
-    padding: 2%;
+    background: linear-gradient(90deg, #000000, #434343);
+    color: white;
+    padding: 1.5%;
     border-radius: 10px;
-}
+    text-align: center;
+    font-size: 0.9rem;
+        }}
