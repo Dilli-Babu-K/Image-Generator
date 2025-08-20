@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Generator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Online Image Generator</h1>
-        <input type="text" id="searchInput" placeholder="Search images...">
-    </header>
-    <br>
-    <main>
-        <section class="image-grid">
-            <!-- Images will be dynamically added here -->
-        </section>
-    </main>
-    <br>
-    <footer>
-        <p>Image Generator &copy; 2024</p>
-    </footer>
-    <script src="script.js"></script>
+
+  <!-- Header -->
+  <header>
+    <h1>AI Image Generator</h1>
+    <p>Create stunning visuals instantly ✨</p>
+  </header>
+
+  <!-- Search -->
+  <div class="search-container">
+    <input type="text" class="searchInput" placeholder="Enter your prompt...">
+    <button class="searchButton">Generate</button>
+  </div>
+
+  <!-- Image Grid -->
+  <section class="image-grid">
+    <!-- Example Card -->
+    <div class="image-card">
+      <img src="https://source.unsplash.com/400x300/?nature,forest" alt="Generated Image">
+      <button class="pin-btn">📌</button>
+    </div>
+
+    <div class="image-card">
+      <img src="https://source.unsplash.com/400x300/?technology,future" alt="Generated Image">
+      <button class="pin-btn">📌</button>
+    </div>
+
+    <div class="image-card">
+      <img src="https://source.unsplash.com/400x300/?art,painting" alt="Generated Image">
+      <button class="pin-btn">📌</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 AI Image Generator • Crafted with ❤️</p>
+  </footer>
+
 </body>
-</html>
+    </html>
