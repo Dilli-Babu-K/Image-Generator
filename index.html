@@ -103,15 +103,9 @@
         errorMessage.classList.add('hidden');
         imageContainer.innerHTML = ""; 
 
-        const payload = {
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            // FIX: Request both TEXT and IMAGE modalities for the API call to succeed
-            responseModalities: ['TEXT', 'IMAGE']
-          }
-        };
+        const payload = { instances: [{ prompt: prompt }], parameters: { "sampleCount": 1 } };
         const apiKey = ""; // Canvas will provide this at runtime
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-preview-image-generation:generateContent?key=${apiKey}`;
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
 
         let retries = 0;
         const maxRetries = 5;
@@ -127,7 +121,7 @@
 
             if (response.ok) {
               const result = await response.json();
-              const base64Data = result?.candidates?.[0]?.content?.parts?.find(p => p.inlineData)?.inlineData?.data;
+              const base64Data = result?.predictions?.[0]?.bytesBase64Encoded;
 
               if (base64Data) {
                 const imageUrl = `data:image/png;base64,${base64Data}`;
